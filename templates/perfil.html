@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Mi Perfil{% endblock %}
+
+{% block content %}
+<div class="perfil-container">
+  <h1>Mi Perfil</h1>
+
+  <div class="perfil-box">
+    {% if perfil.avatar %}
+      <img src="{{ perfil.avatar.url }}" alt="Avatar" class="avatar">
+    {% else %}
+      <img src="{% static 'img/default-avatar.png' %}" alt="Sin foto" class="avatar">
+    {% endif %}
+
+    <div class="perfil-info">
+      <p><strong>Usuario:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Bio:</strong> {{ perfil.bio }}</p>
+    </div>
+  </div>
+
+  <a href="{% url 'editar_perfil' %}" class="btn-editar">Editar Perfil</a>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div style="background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;">
+    <h2 style="text-align: center; color: #4a148c;">Mi Perfil</h2>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img src="{{ user.perfil.get_avatar_url }}" alt="Avatar" width="150" height="150" style="border-radius: 50%; object-fit: cover; border: 3px solid #ccc;">
+      <p style="margin-top: 10px; color: gray;">Vista previa del avatar</p>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" style="background-color: #6a1b9a; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+          Guardar cambios
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

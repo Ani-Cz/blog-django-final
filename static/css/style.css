@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2d3f5; 
+}
+
+
+nav {
+    background-color: #707ec5;
+    padding: 15px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a,
+nav ul li button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul li button:hover,
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, p {
+    color: #333;
+}
+
+
+button {
+    color: rgb(95, 95, 214);
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.perfil-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.perfil-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #707ec5;
+}
+
+.perfil-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.btn-editar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #707ec5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-editar:hover {
+    background-color: #5a69b0;
+}

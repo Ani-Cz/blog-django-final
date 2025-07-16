@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Bandeja de Salida{% endblock %}
+
+{% block content %}
+<h2>Bandeja de Salida</h2>
+<ul>
+  {% for mensaje in mensajes %}
+    <li>
+      <strong>Para:</strong> {{ mensaje.receptor.username }}<br>
+      <strong>Mensaje:</strong> {{ mensaje.contenido }}<br>
+      <strong>Fecha:</strong> {{ mensaje.fecha|date:"d/m/Y H:i" }}
+    </li>
+  {% empty %}
+    <li>No has enviado ningún mensaje.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'enviar_mensaje' %}">Enviar nuevo mensaje</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div style="max-width: 600px; margin: auto; background-color: #f1f1f1; padding: 20px; border-radius: 10px;">
+    <h2 style="text-align: center;">Enviar mensaje</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+        Enviar mensaje
+      </button>
+    </form>
+  </div>
+{% endblock %}
